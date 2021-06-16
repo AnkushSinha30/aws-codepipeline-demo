@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
+                sh "echo checkout......"
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnkushSinha30/aws-codepipeline-demo.git']]])
             }
         }
